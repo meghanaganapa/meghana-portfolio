@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0ea5a9" />
+      <stop offset="1" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g)" rx="12"/>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif">
+    <text x="60" y="140" font-size="48" font-weight="700">GridFlex AI</text>
+    <text x="60" y="200" font-size="20" opacity="0.95">Real-time Renewable Energy Optimisation Assistant</text>
+
+    <rect x="60" y="240" width="420" height="180" rx="8" fill="#ffffff22" />
+    <text x="80" y="280" font-size="18">• Simulated solar & home load</text>
+    <text x="80" y="310" font-size="18">• Lambda + EventBridge + DynamoDB</text>
+    <text x="80" y="340" font-size="18">• Amazon Bedrock explanations</text>
+    <text x="80" y="370" font-size="18">• Base44 dashboard</text>
+
+    <rect x="520" y="240" width="560" height="270" rx="8" fill="#ffffff11" />
+    <text x="540" y="300" font-size="20">Demo</text>
+  </g>
+</svg>

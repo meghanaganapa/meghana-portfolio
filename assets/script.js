@@ -12,8 +12,8 @@ function setActive(btn){
 
 function applyFilter(tag){
   projects.forEach(p => {
-    const tags = (p.getAttribute("data-tags") || "").split(",").map(s => s.trim());
-    const show = (tag === "all") || tags.includes(tag);
+    const tags = (p.getAttribute("data-tags") || "").split(",").map(s => s.trim().toLowerCase());
+    const show = (tag === "all") || tags.includes((tag || '').toLowerCase());
     p.style.display = show ? "" : "none";
   });
 }
@@ -57,3 +57,34 @@ if (resumeBtn && resumeBtn.getAttribute("href") === "#") {
     alert("Add your hosted resume link in index.html (search for id='resumeBtn').");
   });
 }
+
+// Lightbox video modal handling (uses Bootstrap modal)
+document.addEventListener('DOMContentLoaded', () => {
+  const videoModalEl = document.getElementById('videoModal');
+  const modalVideo = document.getElementById('modalVideo');
+  if (!videoModalEl || !modalVideo) return;
+  const bsModal = new bootstrap.Modal(videoModalEl, {});
+
+  document.querySelectorAll('.open-video').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      const src = el.getAttribute('data-video-src');
+      if (!src) return;
+      const sourceEl = modalVideo.querySelector('source');
+      sourceEl.setAttribute('src', src);
+      modalVideo.load();
+      bsModal.show();
+    });
+  });
+
+  videoModalEl.addEventListener('hidden.bs.modal', () => {
+    try {
+      modalVideo.pause();
+      const sourceEl = modalVideo.querySelector('source');
+      sourceEl.setAttribute('src', '');
+      modalVideo.load();
+    } catch (err) {
+      // ignore
+    }
+  });
+});
