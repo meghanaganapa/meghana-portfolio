@@ -37,6 +37,15 @@ a:hover {
   border-bottom: 1px solid var(--border);
 }
 
+.achievement-banner {
+  background: linear-gradient(
+    90deg,
+    rgba(14, 165, 164, 0.16),
+    rgba(245, 158, 11, 0.12)
+  );
+  border-bottom: 1px solid var(--border);
+}
+
 .nav-link {
   color: var(--muted) !important;
 }
