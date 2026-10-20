@@ -39,6 +39,11 @@ a:hover {
   border-bottom: 1px solid var(--border);
 }
 
+.availability-banner {
+  background: rgba(15, 118, 110, 0.14);
+  border-bottom: 1px solid var(--border);
+}
+
 .achievement-banner {
   background: linear-gradient(
     90deg,

@@ -88,6 +88,27 @@
       </div>
     </nav>
 
+    <!-- Availability Banner -->
+    <section class="availability-banner">
+      <div class="container py-2">
+        <div
+          class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2"
+        >
+          <div class="d-flex flex-wrap align-items-center gap-2">
+            <span class="pulse-dot" title="Available"></span>
+            <span class="fw-semibold">Open to AI Engineer opportunities</span>
+            <span class="subtle small"
+              >· Available immediately · Open to relocation · Full work rights
+              in Australia</span
+            >
+          </div>
+          <a class="btn btn-accent btn-sm" href="#contact">
+            <i class="bi bi-send me-1"></i> Get in touch
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Achievement Banner -->
     <section class="achievement-banner">
       <div class="container py-3">
@@ -118,22 +139,24 @@
             <span class="pill"
               ><i class="bi bi-geo-alt me-1"></i> Melbourne</span
             >
-            <span class="pill">Agentic AI Engineer</span>
-            <span class="pill">AI + Data Engineering</span>
-            <span class="pill">AWS & LLM Systems</span>
-            <span class="pill">Analytics Automation</span>
+            <span class="pill">AI Engineer</span>
+            <span class="pill">Agents & Multi-Agent Workflows</span>
+            <span class="pill">RAG & Evaluation</span>
+            <span class="pill">AWS & MCP</span>
           </div>
 
           <h1 class="hero-title fw-bold mb-3">
-            Hi, I am Meghana. I build AI automation, data pipelines, and backend
-            workflows that turn complex information into useful systems.
+            Hi, I am Meghana. I build AI agents, multi-agent workflows, and RAG
+            systems that are reliable enough to ship.
           </h1>
           <p class="subtle fs-6 mb-4">
-            Analytics and Data Engineering graduate with hands-on experience
-            building cloud-based ETL pipelines, AI-powered automation systems,
-            scalable data workflows, and backend APIs using Python, SQL, AWS,
-            FastAPI, and LLM technologies. I am especially interested in
-            healthcare analytics and AI-driven decision-making.
+            AI engineer with a Master of Data Science from The University of
+            Melbourne who owns AI features end to end in Python, from design
+            through evaluation to delivery. I build tool-calling agents and MCP
+            servers with guardrails, human review and budget caps, measure them
+            with locked evaluation sets, and deploy on AWS (Bedrock, Lambda,
+            EventBridge, DynamoDB). I am open to new opportunities, available
+            immediately, and open to relocation.
           </p>
 
           <div class="d-flex flex-wrap gap-2">
@@ -157,10 +180,13 @@
 
           <div class="mt-4 d-flex flex-wrap gap-2">
             <span class="badge badge-accent rounded-pill px-3 py-2"
-              >Data Science Graduate</span
+              >Open to Opportunities</span
+            >
+            <span class="badge badge-accent rounded-pill px-3 py-2"
+              >Available Immediately</span
             >
             <span class="badge badge-soft rounded-pill px-3 py-2"
-              >Available Immediately</span
+              >Open to Relocate</span
             >
             <span class="badge badge-soft rounded-pill px-3 py-2"
               >Full Work Rights (AU)</span
@@ -179,8 +205,8 @@
               <div>
                 <div class="fw-semibold">Meghana Ganapa</div>
                 <div class="subtle small">
-                  I am working in AI automation, data engineering, cloud
-                  workflows, and analytics.
+                  AI Engineer · open to new roles, available immediately and
+                  open to relocation.
                 </div>
               </div>
               <span class="pulse-dot" title="Available"></span>
@@ -188,11 +214,11 @@
             <div class="profile-stats">
               <div>
                 <strong>Current Focus</strong>
-                <span>AWS, LLMs, and serverless systems</span>
+                <span>AI agents, RAG, and evaluation</span>
               </div>
               <div>
                 <strong>Recent Work</strong>
-                <span>GridFlex AI and WattWise</span>
+                <span>Multi-agent systems and MCP servers</span>
               </div>
             </div>
           </div>
@@ -242,6 +268,98 @@
       </div>
 
       <div class="row g-4 mt-2" id="projectGrid">
+        <!-- New) Support Ticket Triage Agents -->
+        <div class="col-md-6 project" data-tags="ai">
+          <div class="cardx p-4 h-100">
+            <div class="d-flex justify-content-between align-items-start gap-3">
+              <div>
+                <div class="project-title">
+                  Support Ticket Triage Agents - Multi-Agent System
+                </div>
+                <div class="subtle">
+                  Routes, prioritises and drafts replies for support tickets with guardrails and human-in-the-loop review.
+                </div>
+              </div>
+              <span class="badge badge-accent rounded-pill">AI Agents</span>
+            </div>
+
+            <ul class="mt-3 subtle mb-0">
+              <li>
+                <strong>Architecture:</strong> An LLM orchestrator calls five specialist agents as tools (classifier, priority, knowledge retrieval, responder, guardrail) through an in-process MCP server.
+              </li>
+              <li>
+                <strong>Reliability:</strong> Enforced in code: priority floors the LLM cannot lower, guardrails re-run on every reply, a human review gate, per-ticket budget caps and turn limits, and an offline fallback.
+              </li>
+              <li>
+                <strong>Observability:</strong> Every run is traced and costed.
+              </li>
+              <li>
+                <strong>Evaluation:</strong> A locked, checksum-verified test set with paired bootstrap tests; routing accuracy rose from 80.0% to 86.7% and auto-handled tickets from 44.4% to 62.2%.
+              </li>
+            </ul>
+
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <span class="pill">Python</span><span class="pill">Claude Agent SDK</span><span class="pill">MCP</span><span class="pill">FastAPI</span><span class="pill">scikit-learn</span><span class="pill">pytest</span><span class="pill">Docker</span><span class="pill">GitHub Actions</span>
+            </div>
+
+            <div class="mt-4 d-flex gap-2">
+              <a
+                class="btn btn-outline-light btn-sm"
+                href="https://github.com/meghanaganapa/support-ticket-triage-agent"
+                target="_blank"
+                rel="noreferrer"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- New) Finance Analyst MCP -->
+        <div class="col-md-6 project" data-tags="ai">
+          <div class="cardx p-4 h-100">
+            <div class="d-flex justify-content-between align-items-start gap-3">
+              <div>
+                <div class="project-title">
+                  Finance Analyst MCP - Safe Natural-Language Finance Queries
+                </div>
+                <div class="subtle">
+                  MCP server and assistant that lets finance teams ask questions of their sales and finance database in plain English.
+                </div>
+              </div>
+              <span class="badge badge-accent rounded-pill">MCP / LLM</span>
+            </div>
+
+            <ul class="mt-3 subtle mb-0">
+              <li>
+                <strong>Problem:</strong> FP&amp;A questions like top customers, budget variance and overdue receivables needed an analyst ticket or hand-written SQL against production.
+              </li>
+              <li>
+                <strong>Safety:</strong> Every answer comes from a validated, read-only SQL query with row limits, a time budget and three independent safety layers; HR and customer contact data cannot be reached.
+              </li>
+              <li>
+                <strong>Trust:</strong> Numbers are rendered from database rows, never model text; uncertain answers are flagged for a human or abstained on instead of guessed.
+              </li>
+              <li>
+                <strong>Results:</strong> 48/48 unsafe queries blocked and 0% silent errors on a locked held-out set. Works from Claude Desktop, Claude Code, Cursor, a CLI or a REST API, and fully offline.
+              </li>
+            </ul>
+
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <span class="pill">Python</span><span class="pill">MCP</span><span class="pill">Claude</span><span class="pill">OpenAI-compatible</span><span class="pill">SQL</span><span class="pill">pytest</span><span class="pill">GitHub Actions</span>
+            </div>
+
+            <div class="mt-4 d-flex gap-2">
+              <a
+                class="btn btn-outline-light btn-sm"
+                href="https://github.com/meghanaganapa/finance-analyst-mcp"
+                target="_blank"
+                rel="noreferrer"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+
         <!-- 1) AI Coding Agent -->
         <div class="col-md-6 project" data-tags="ai">
           <div class="cardx p-4 h-100">
@@ -749,6 +867,52 @@
           </div>
         </div>
 
+        <!-- New) Retail Lakehouse -->
+        <div class="col-md-6 project" data-tags="de">
+          <div class="cardx p-4 h-100">
+            <div class="d-flex justify-content-between align-items-start gap-3">
+              <div>
+                <div class="project-title">
+                  Retail Sales &amp; Inventory Lakehouse on Azure Databricks
+                </div>
+                <div class="subtle">
+                  End-to-end medallion lakehouse turning CDC, clickstream and supplier feeds into governed sales and inventory analytics.
+                </div>
+              </div>
+              <span class="badge badge-accent rounded-pill">Data Eng</span>
+            </div>
+
+            <ul class="mt-3 subtle mb-0">
+              <li>
+                <strong>Pipeline:</strong> Bronze, Silver and Gold layers with Auto Loader ingestion of CDC orders, clickstream events and supplier inventory files, with schema evolution.
+              </li>
+              <li>
+                <strong>Modelling:</strong> Governed star schema with SCD2 dimensions plus sales, inventory (days of cover, low-stock alerts) and funnel analytics.
+              </li>
+              <li>
+                <strong>Data quality:</strong> Failed rows quarantined with reasons, revenue reconciled against payments, and a quality gate that refuses to publish bad data.
+              </li>
+              <li>
+                <strong>Testing:</strong> All business logic runs locally in plain PySpark and is unit-tested in CI.
+              </li>
+            </ul>
+
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <span class="pill">Azure Databricks</span><span class="pill">Lakeflow</span><span class="pill">Auto Loader</span><span class="pill">Unity Catalog</span><span class="pill">Asset Bundles</span><span class="pill">PySpark</span>
+            </div>
+
+            <div class="mt-4 d-flex gap-2">
+              <a
+                class="btn btn-outline-light btn-sm"
+                href="https://github.com/meghanaganapa/retail-lakehouse-databricks"
+                target="_blank"
+                rel="noreferrer"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+
         <!-- 7) AWS data pipeline (code link exists) -->
         <div class="col-md-6 project" data-tags="de">
           <div class="cardx p-4 h-100">
@@ -1142,21 +1306,42 @@
       <div class="row g-3">
         <div class="col-lg-4">
           <div class="cardx p-4 h-100">
-            <div class="fw-semibold">Agentic AI Engineer</div>
-            <div class="subtle">Enspyr - May 2026 to Present</div>
-            <div class="subtle">Melbourne, Victoria</div>
+            <div class="fw-semibold">AI Engineer</div>
+            <div class="subtle">Enspyr Australia · May 2026 – Present</div>
             <ul class="mt-3 subtle mb-0">
               <li>
-                Built and tested model-as-a-judge evaluation workflows using
-                Claude, OpenAI, and Gemini APIs to evaluate model agreement,
-                reasoning quality, escalation decisions, latency, and
-                cost-performance tradeoffs across coding and reasoning tasks.
+                Built a model routing system that classifies each prompt by complexity and domain and sends it to the most suitable LLM, reducing cost per call by approximately 20%.
               </li>
               <li>
-                Experimented with HumanEval and BBH benchmarking harnesses,
-                resolved bugs in the HumanEval evaluation dataset workflow, and
-                improved JSONL logging, parser/scoring validation, failure
-                diagnostics, and reproducible LLM benchmarking pipelines.
+                Built evaluation workflows benchmarking OpenAI, Claude and Gemini on quality, latency and cost, with automated log validation that made review approximately 2x faster.
+              </li>
+              <li>
+                Building AI voice agents with RAG and tuning prompts for production, designed so a new domain is added by swapping knowledge files.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="cardx p-4 h-100">
+            <div class="fw-semibold">AI/ML Engineer</div>
+            <div class="subtle">Twelfth AI · Jun 2026 – Jul 2026</div>
+            <ul class="mt-3 subtle mb-0">
+              <li>
+                Owned features of a production RAG/GraphRAG agent for a national retailer over BigQuery, PostgreSQL and Neo4j, reducing category managers' research time by approximately 30%.
+              </li>
+              <li>
+                Evaluated quality with golden-question sets, LLM-as-a-judge scoring and human review, and added guarded retrieval and confidence labels for traceable answers.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="cardx p-4 h-100">
+            <div class="fw-semibold">Data Engineer Intern</div>
+            <div class="subtle">JurisTechne · May 2025 – Jul 2025</div>
+            <ul class="mt-3 subtle mb-0">
+              <li>
+                Built Python pipelines and services deployed on Kubernetes, reducing manual collection by approximately 30%.
               </li>
             </ul>
           </div>
@@ -1164,17 +1349,10 @@
         <div class="col-lg-4">
           <div class="cardx p-4 h-100">
             <div class="fw-semibold">Research Intern</div>
-            <div class="subtle">
-              Melbourne Data Analytics Platform · Feb 2023 – May 2023
-            </div>
+            <div class="subtle">Melbourne Data Analytics Platform, The University of Melbourne · Feb 2023 – May 2023</div>
             <ul class="mt-3 subtle mb-0">
               <li>
-                Compared ImageJ vs Pixel Annotation Tool for labelled image
-                workflows.
-              </li>
-              <li>
-                Implemented a CNN in Python, improving tissue classification
-                accuracy by 15%.
+                Designed controlled ML experiments that improved accuracy by approximately 15%.
               </li>
             </ul>
           </div>
@@ -1185,15 +1363,7 @@
             <div class="subtle">Qentelli Solutions · Sep 2022 – Dec 2022</div>
             <ul class="mt-3 subtle mb-0">
               <li>
-                Automated workflows using REST APIs (30% reduction in manual
-                effort).
-              </li>
-              <li>
-                Optimized SQL queries to improve data retrieval performance.
-              </li>
-              <li>
-                Collaborated with cross-functional teams to translate
-                requirements into data-driven automation and API solutions.
+                Built backend components and API integrations, reducing manual processing by approximately 30%.
               </li>
             </ul>
           </div>
@@ -1203,10 +1373,8 @@
             <div class="fw-semibold">Software Engineer Intern</div>
             <div class="subtle">Accolite Digital · Feb 2022 – Aug 2022</div>
             <ul class="mt-3 subtle mb-0">
-              <li>Built MVC architecture with Spring Boot + MongoDB.</li>
               <li>
-                Improved dev velocity (30%) and system reliability (25%);
-                reduced prod errors.
+                Developed tested Java APIs with CI/CD, reducing manual regression testing by approximately 20%.
               </li>
             </ul>
           </div>
@@ -1256,7 +1424,9 @@
           <div class="cardx p-4 h-100">
             <div class="fw-semibold mb-2">Certifications</div>
             <ul class="subtle mb-0">
-              <li>AWS Cloud Practitioner</li>
+              <li>AWS Certified Cloud Practitioner</li>
+              <li>Databricks Fundamentals</li>
+              <li>Google Analytics 4 (GA4) Certification</li>
               <li>AWS Certified AI Practitioner / Generative AI Developer - In Progress</li>
             </ul>
             <div class="divider my-3"></div>
